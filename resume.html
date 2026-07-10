@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naresh Bhadke — Resume</title>
+<style>
+:root{
+  --ink:#111C26;
+  --soft:#4A5A66;
+  --teal:#0B6E6E;
+  --rule:#D8E0DA;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:'Helvetica Neue',Arial,sans-serif;color:var(--ink);font-size:9.6pt;line-height:1.45;
+  max-width:7.6in;margin:0 auto;padding:24px 8px}
+a{color:var(--teal);text-decoration:none}
+
+.head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid var(--teal);padding-bottom:10px;margin-bottom:12px}
+h1{font-size:19pt;letter-spacing:-.01em;line-height:1.1}
+.title{color:var(--teal);font-weight:600;font-size:10.5pt;margin-top:2px}
+.contact{text-align:right;font-size:8.6pt;color:var(--soft);line-height:1.55}
+
+h2{font-size:9.4pt;text-transform:uppercase;letter-spacing:.14em;color:var(--teal);
+  border-bottom:1px solid var(--rule);padding-bottom:3px;margin:12px 0 7px}
+.summary{color:var(--soft)}
+
+.job{margin-bottom:9px;break-inside:avoid}
+.jobhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.jobhead b{font-size:10.2pt}
+.org{color:var(--teal);font-weight:600;font-size:9.2pt}
+.when{color:var(--soft);font-size:8.4pt;white-space:nowrap;font-weight:600}
+.job ul{margin:3px 0 0;padding-left:16px;color:var(--soft)}
+.job li{margin-bottom:2px}
+
+.proj{margin-bottom:6px;break-inside:avoid}
+.proj b{font-size:9.6pt}
+.proj .tag{color:var(--teal);font-weight:600;font-size:8.2pt;text-transform:uppercase;letter-spacing:.06em}
+.proj p{color:var(--soft);margin-top:1px}
+.proj .stack{font-size:8.2pt;color:var(--soft);font-style:italic}
+
+.skills{display:grid;grid-template-columns:auto 1fr;gap:3px 14px}
+.skills dt{font-weight:700;font-size:8.8pt;white-space:nowrap}
+.skills dd{color:var(--soft)}
+
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.edu{margin-bottom:5px}
+.edu b{font-size:9.4pt}
+.edu span{display:block;color:var(--soft);font-size:8.6pt}
+
+@page{size:A4;margin:11mm 12mm}
+@media print{body{padding:0;max-width:none}}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div>
+    <h1>Naresh Bhadke</h1>
+    <p class="title">Technical Lead · Payments &amp; Transit Systems</p>
+  </div>
+  <div class="contact">
+    Pune, India<br>
+    <a href="mailto:bhadkenaresh841@gmail.com">bhadkenaresh841@gmail.com</a><br>
+    <a href="https://www.linkedin.com/in/bhadkenaresh841">linkedin.com/in/bhadkenaresh841</a> · <a href="https://bhadkenaresh841.github.io">bhadkenaresh841.github.io</a>
+  </div>
+</div>
+
+<h2>Summary</h2>
+<p class="summary">Technical Lead with 9+ years of experience designing and delivering enterprise-scale software across FinTech, Banking, Healthcare and Transit Payments. Architect of distributed, cloud-native platforms on Java 21, Spring Boot, microservices and event-driven architecture, with hands-on depth in CQRS, Saga, Kafka, ISO 8583 and OAuth2. Led end-to-end delivery of mission-critical payment and settlement systems — from contactless transit fare collection to Mastercard T-1 settlement and Visa Click to Pay — while mentoring engineers and championing AI-assisted engineering practices.</p>
+
+<h2>Experience</h2>
+
+<div class="job">
+  <div class="jobhead"><span><b>Technical Lead</b> · <span class="org">E-ZEST Solutions, Pune</span></span><span class="when">Apr 2025 — Present</span></div>
+  <ul>
+    <li>Leading design and development of an Open-Loop Transit Fare Platform (SPX Technologies) — a cloud-native, account-based ticketing system enabling contactless Visa &amp; Mastercard fare payments.</li>
+    <li>Architecting real-time fare processing, payment authorization, settlement and reconciliation with multi-tenant deployments across transit agencies.</li>
+    <li>Driving engineering standards with Java 21, Spring Boot 4.0, Spring Cloud, AWS SQS/SNS, OAuth2, CQRS and ISO 8583.</li>
+    <li>Embedded DevSecOps quality gates into CI/CD — SonarQube, Snyk and Checkmarx One code-security scanning enforced on every release.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="jobhead"><span><b>Lead Technology</b> · <span class="org">Synechron Technologies, Pune</span></span><span class="when">Jul 2021 — Mar 2025</span></div>
+  <ul>
+    <li>Led Mastercard &amp; Visa programme integrations; delivered the Mastercard T-1 settlement application and spearheaded Visa Click to Pay.</li>
+    <li>Designed CQRS-based microservices for Emirates NBD (Bawaba Corporate): noqodi payment integration, reversal process flows and delivery-status APIs — with SonarQube, Snyk and Checkmarx One security scans enforced as CI quality gates.</li>
+    <li>Delivered BANKNET (DGFT, Japan) — ISO 8583 messaging with custom TCP socket design and Spring Batch settlement on Oracle 21 &amp; PostgreSQL.</li>
+    <li>Implemented event-driven architectures and secure API integrations using Spring Boot, Kafka and OAuth2 across AWS, Azure and OpenShift.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="jobhead"><span><b>Sr. Software Developer</b> · <span class="org">DeepTek Medical Imaging, Pune</span></span><span class="when">Apr 2019 — Jul 2021</span></div>
+  <ul>
+    <li>Engineered the Genki/Augmento AI-driven teleradiology platform — multi-cloud (GCP, AWS, Azure, OCI) with DICOM imaging via DCM4CHE and Cornerstone.</li>
+    <li>Led OAuth2-secured client onboarding and cross-system API integrations, improving performance and scalability through cloud-native solutions.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="jobhead"><span><b>Associate Java Developer</b> · <span class="org">Softenger India, Pune</span></span><span class="when">Apr 2017 — Nov 2018</span></div>
+  <ul>
+    <li>Led development of TalentOrb HRMS on a microservices architecture, improving system performance and scalability.</li>
+    <li>Built a Lead Management System and a Linux-deployed payroll application using Java 8, Spring Boot, Azure and PostgreSQL.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="jobhead"><span><b>Software Developer</b> · <span class="org">Winsnit Technologies, Pune</span></span><span class="when">Jul 2016 — Dec 2016</span></div>
+  <ul>
+    <li>Developed backend services and REST APIs for OnField using Java 8, Spring Boot and Jersey JAX-RS; contributed across design, testing and deployment.</li>
+  </ul>
+</div>
+
+<h2>Key Projects</h2>
+
+<div class="proj">
+  <b>Open-Loop Transit Fare Platform</b> — <span class="tag">Transit Payments</span>
+  <p>Account-based ticketing platform that lets riders tap any contactless Visa or Mastercard to pay fares — real-time authorization, fare capping, settlement and reconciliation across multi-tenant transit agencies.
+  <span class="stack">Java 21 · Spring Boot 4.0 · AWS SQS/SNS · CQRS · ISO 8583 · MongoDB · SonarQube · Snyk · Checkmarx One</span></p>
+</div>
+
+<div class="proj">
+  <b>Bawaba Corporate Banking Gateway</b> — <span class="tag">Banking · Emirates NBD</span>
+  <p>Event-driven CQRS microservices powering Emirates NBD's corporate banking channel — noqodi wallet integration, payment-reversal workflows and delivery-status APIs, with security scanning enforced as CI quality gates.
+  <span class="stack">Java 11 · Spring Cloud · Oracle 21 · Azure · OpenShift · OAuth2 · SonarQube · Snyk · Checkmarx One</span></p>
+</div>
+
+<div class="proj">
+  <b>BANKNET Interbank Payment Switch</b> — <span class="tag">Card Networks · Japan</span>
+  <p>Japan's national interbank card network integration — high-throughput ISO 8583 message processing over a custom TCP socket layer, with Spring Batch driving end-of-day settlement.
+  <span class="stack">ISO 8583 · TCP Sockets · Spring Batch · React JS · PostgreSQL</span></p>
+</div>
+
+<div class="proj">
+  <b>Augmento — AI-Powered Teleradiology</b> — <span class="tag">Healthcare AI</span>
+  <p>Diagnostic imaging platform pairing radiologists with AI triage — DICOM ingestion pipelines, multi-cloud storage and OAuth2-secured hospital-system integrations.
+  <span class="stack">Spring Boot · DCM4CHE · TensorFlow · GCP · AWS · OCI</span></p>
+</div>
+
+<div class="proj">
+  <b>TalentOrb Workforce Platform</b> — <span class="tag">Enterprise HR</span>
+  <p>End-to-end HR management suite rebuilt from a monolith into microservices — recruitment, payroll and employee lifecycle with measurable gains in performance and scalability.
+  <span class="stack">Java 8 · Spring Boot · Spring Cloud · Azure · PostgreSQL · Jenkins</span></p>
+</div>
+
+<h2>Technical Skills</h2>
+<dl class="skills">
+  <dt>Programming</dt><dd>Java 21, Java 8, Node.js, SQL, JavaScript, Python</dd>
+  <dt>Backend</dt><dd>Spring Boot, Spring Cloud, Spring Security, Spring Batch, Hibernate/JPA, REST, GraphQL</dd>
+  <dt>Architecture</dt><dd>Microservices, Event-Driven, DDD, CQRS, Saga Pattern, Circuit Breaker, 12-Factor App, SOLID Principles, Distributed Systems</dd>
+  <dt>Messaging</dt><dd>Apache Kafka, RabbitMQ, AWS SQS/SNS</dd>
+  <dt>Cloud &amp; Platform</dt><dd>AWS, Azure, GCP, OCI, Docker, Kubernetes, OpenShift, Helm</dd>
+  <dt>DevOps</dt><dd>Jenkins, GitHub Actions, SonarQube, Snyk, Checkmarx One, ELK, Prometheus, Grafana, OpenTelemetry</dd>
+  <dt>Security</dt><dd>OAuth2, OIDC, JWT, API Security, OWASP</dd>
+  <dt>Databases</dt><dd>Oracle, PostgreSQL, MySQL, SQL Server, MongoDB, Redis</dd>
+  <dt>AI Engineering</dt><dd>AI-Assisted Development, GenAI Integration, LLM Applications, RAG, GitHub Copilot, Amazon Q</dd>
+  <dt>Leadership</dt><dd>Agile Scrum, TDD, Technical Governance, Mentoring, Solution Design, Stakeholder Management</dd>
+</dl>
+
+<div class="twocol">
+  <div>
+    <h2>Education</h2>
+    <div class="edu"><b>B.E. Computer Science &amp; Engineering</b><span>SRTMUN, Nanded · 2011 – 2015</span></div>
+    <div class="edu"><b>Diploma in Computer Engineering</b><span>MSBTE · 2008 – 2011</span></div>
+  </div>
+  <div>
+    <h2>Certifications</h2>
+    <div class="edu"><b>AWS Cloud Practitioner Essentials</b><span>AWS Skill Builder</span></div>
+    <div class="edu"><b>OCI 2023 Foundations Associate</b><span>Oracle</span></div>
+    <div class="edu"><b>Docker Certification</b> · <b>Google Cloud Onboard</b><span>Application Development</span></div>
+  </div>
+</div>
+
+</body>
+</html>

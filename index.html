@@ -47,6 +47,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .navlinks{display:flex;gap:26px;font-family:var(--mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
 .navlinks a{color:var(--ink-soft);transition:color .18s}
 .navlinks a:hover{color:var(--teal)}
+.navlinks a.navcta{color:#fff;background:var(--teal);padding:7px 16px;border-radius:999px;transition:background .18s}
+.navlinks a.navcta:hover{background:var(--teal-deep);color:#fff}
 @media (max-width:720px){.navlinks{display:none}}
 
 /* ---------- hero ---------- */
@@ -59,7 +61,7 @@ header{background:
 header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
   background:linear-gradient(90deg,var(--teal) 0 34%,var(--amber) 34% 56%,var(--violet) 56% 78%,var(--rose) 78% 100%);z-index:3}
 .heroimg{position:absolute;top:0;right:0;bottom:0;width:46%;z-index:0;
-  background:url('assets/profile.jpg') right center/cover no-repeat;
+  background:url('assets/portrait.jpg') right center/cover no-repeat;
   filter:blur(7px) saturate(.85) brightness(.72);transform:scale(1.06);
   -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.9) 100%);
   mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.9) 100%)}
@@ -201,6 +203,7 @@ footer a:hover{text-decoration:underline}
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
+      <a class="navcta" href="assets/Naresh_Bhadke_Resume.pdf" download>Resume ↓</a>
     </div>
   </div>
 </nav>
@@ -218,9 +221,9 @@ footer a:hover{text-decoration:underline}
       <div class="stat"><b>Java 21</b><span>Core stack</span></div>
     </div>
     <div class="contactbar">
-      <a class="cta" href="https://www.linkedin.com/in/bhadkenaresh841" target="_blank" rel="noopener">Get in touch →</a>
-      <a href="assets/Naresh_Bhadke_Resume.pdf" download="Naresh_Bhadke_Resume.pdf">Download Resume ↓</a>
-      <a href="#experience">View experience</a>
+      <a class="cta" href="assets/Naresh_Bhadke_Resume.pdf" download="Naresh_Bhadke_Resume.pdf">⬇ Download Resume</a>
+      <a href="https://www.linkedin.com/in/bhadkenaresh841" target="_blank" rel="noopener">Get in touch →</a>
+      <a href="mailto:bhadkenaresh841@gmail.com">Email me</a>
     </div>
   </div>
 </header>
@@ -265,9 +268,10 @@ footer a:hover{text-decoration:underline}
             <span class="when">APR 2025 — PRESENT</span>
           </div>
           <ul>
-            <li>Leading the design and development of the <b>Open Payment Transit System</b> (SPX Technologies) — a cloud-native, account-based ticketing platform enabling contactless Visa &amp; Mastercard fare payments.</li>
+            <li>Leading the design and development of an <b>Open-Loop Transit Fare Platform</b> (SPX Technologies) — a cloud-native, account-based ticketing system enabling contactless Visa &amp; Mastercard fare payments.</li>
             <li>Architecting real-time fare processing, payment authorization, settlement and reconciliation with multi-tenant deployments across transit agencies.</li>
             <li>Driving engineering standards with Java 21, Spring Boot 4.0, Spring Cloud, AWS SQS/SNS, OAuth2, CQRS and ISO 8583.</li>
+            <li>Embedded <b>DevSecOps quality gates</b> into CI/CD — SonarQube, Snyk and Checkmarx One code-security scanning enforced on every release.</li>
           </ul>
         </div>
       </article>
@@ -281,7 +285,7 @@ footer a:hover{text-decoration:underline}
           </div>
           <ul>
             <li>Led Mastercard &amp; Visa programme integrations; delivered the <b>Mastercard T-1 settlement</b> application and spearheaded <b>Visa Click to Pay</b>.</li>
-            <li>Designed CQRS-based microservices for <b>Emirates NBD</b> (Bawaba Corporate): noqodi payment integration, reversal process flows and delivery-status APIs for third-party applications.</li>
+            <li>Designed CQRS-based microservices for <b>Emirates NBD</b> (Bawaba Corporate): noqodi payment integration, reversal process flows and delivery-status APIs — with SonarQube, Snyk and Checkmarx One security scans enforced as CI quality gates.</li>
             <li>Delivered <b>BANKNET (DGFT, Japan)</b> — ISO 8583 messaging with custom TCP socket design and Spring Batch settlement on Oracle 21 &amp; PostgreSQL.</li>
             <li>Implemented event-driven architectures and secure API integrations using Spring Boot, Kafka and OAuth2 across AWS, Azure and OpenShift.</li>
           </ul>
@@ -342,32 +346,32 @@ footer a:hover{text-decoration:underline}
     <div class="projects">
       <article class="ticket c-teal reveal">
         <p class="fare">Transit Payments</p>
-        <h3>Open Payment Transit System</h3>
-        <p>Cloud-native, account-based ticketing platform enabling contactless Visa &amp; Mastercard fare payments — real-time authorization, settlement, reconciliation and multi-tenant agency deployments.</p>
-        <div class="stack"><span class="chip">Java 21</span><span class="chip">Spring Boot 4.0</span><span class="chip">AWS SQS/SNS</span><span class="chip">CQRS</span><span class="chip">ISO 8583</span><span class="chip">MongoDB</span></div>
+        <h3>Open-Loop Transit Fare Platform</h3>
+        <p>Account-based ticketing platform that lets riders tap any contactless Visa or Mastercard to pay fares — handling real-time authorization, fare capping, settlement and reconciliation across multi-tenant transit agencies.</p>
+        <div class="stack"><span class="chip">Java 21</span><span class="chip">Spring Boot 4.0</span><span class="chip">AWS SQS/SNS</span><span class="chip">CQRS</span><span class="chip">ISO 8583</span><span class="chip">MongoDB</span><span class="chip">SonarQube</span><span class="chip">Snyk</span><span class="chip">Checkmarx One</span></div>
       </article>
       <article class="ticket c-amber reveal">
         <p class="fare">Banking · Emirates NBD</p>
-        <h3>Bawaba Corporate</h3>
-        <p>CQRS-based, event-driven microservices for corporate banking — noqodi payment integration, reversal process flows and delivery-status APIs for third-party applications.</p>
-        <div class="stack"><span class="chip">Java 11</span><span class="chip">Spring Cloud</span><span class="chip">Oracle 21</span><span class="chip">Azure</span><span class="chip">OpenShift</span><span class="chip">OAuth2</span></div>
+        <h3>Bawaba Corporate Banking Gateway</h3>
+        <p>Event-driven CQRS microservices powering Emirates NBD's corporate banking channel — integrating the noqodi payment wallet, orchestrating payment-reversal workflows and exposing delivery-status APIs, with SonarQube, Snyk and Checkmarx One security scanning enforced as CI quality gates.</p>
+        <div class="stack"><span class="chip">Java 11</span><span class="chip">Spring Cloud</span><span class="chip">Oracle 21</span><span class="chip">Azure</span><span class="chip">OpenShift</span><span class="chip">OAuth2</span><span class="chip">SonarQube</span><span class="chip">Snyk</span><span class="chip">Checkmarx One</span></div>
       </article>
       <article class="ticket c-violet reveal">
         <p class="fare">Card Networks · Japan</p>
-        <h3>BANKNET — DGFT</h3>
-        <p>National banking network integration built on ISO 8583 messaging with custom TCP socket design and Spring Batch settlement processing.</p>
+        <h3>BANKNET Interbank Payment Switch</h3>
+        <p>Japan's national interbank card network integration — high-throughput ISO 8583 message processing over a custom TCP socket layer, with Spring Batch driving end-of-day settlement on Oracle and PostgreSQL.</p>
         <div class="stack"><span class="chip">ISO 8583</span><span class="chip">TCP Sockets</span><span class="chip">Spring Batch</span><span class="chip">React JS</span><span class="chip">PostgreSQL</span></div>
       </article>
       <article class="ticket c-rose reveal">
         <p class="fare">Healthcare AI</p>
-        <h3>Augmento Teleradiology</h3>
-        <p>AI-assisted diagnostic imaging platform with multi-cloud storage, DICOM pipelines and cross-system OAuth2 integrations improving diagnostic accuracy.</p>
+        <h3>Augmento — AI-Powered Teleradiology</h3>
+        <p>Diagnostic imaging platform pairing radiologists with AI triage — DICOM ingestion pipelines, multi-cloud storage across GCP, AWS, Azure and OCI, and OAuth2-secured integrations with hospital systems.</p>
         <div class="stack"><span class="chip">Spring Boot</span><span class="chip">DCM4CHE</span><span class="chip">TensorFlow</span><span class="chip">GCP</span><span class="chip">AWS</span><span class="chip">OCI</span></div>
       </article>
       <article class="ticket c-teal reveal">
         <p class="fare">Enterprise HR</p>
-        <h3>TalentOrb HRMS</h3>
-        <p>Human resource management system re-engineered on a microservices architecture, delivering measurable gains in performance, scalability and maintainability.</p>
+        <h3>TalentOrb Workforce Platform</h3>
+        <p>End-to-end HR management suite rebuilt from a monolith into microservices — covering recruitment, payroll and employee lifecycle, with measurable gains in performance, scalability and maintainability.</p>
         <div class="stack"><span class="chip">Java 8</span><span class="chip">Spring Boot</span><span class="chip">Spring Cloud</span><span class="chip">Azure</span><span class="chip">PostgreSQL</span><span class="chip">Jenkins</span></div>
       </article>
     </div>
@@ -383,10 +387,10 @@ footer a:hover{text-decoration:underline}
     <div class="skillgrid">
       <div class="skillgroup reveal"><h3>Programming</h3><div class="tags"><span class="tag">Java 21</span><span class="tag">Java 8</span><span class="tag">Node.js</span><span class="tag">SQL</span><span class="tag">JavaScript</span><span class="tag">Python</span></div></div>
       <div class="skillgroup reveal"><h3>Backend &amp; Enterprise</h3><div class="tags"><span class="tag">Spring Boot</span><span class="tag">Spring Cloud</span><span class="tag">Spring Security</span><span class="tag">Spring Batch</span><span class="tag">Hibernate / JPA</span><span class="tag">REST APIs</span><span class="tag">GraphQL</span></div></div>
-      <div class="skillgroup reveal"><h3>Architecture</h3><div class="tags"><span class="tag">Microservices</span><span class="tag">Event-Driven</span><span class="tag">DDD</span><span class="tag">CQRS</span><span class="tag">Saga Pattern</span><span class="tag">Distributed Systems</span></div></div>
+      <div class="skillgroup reveal"><h3>Architecture</h3><div class="tags"><span class="tag">Microservices</span><span class="tag">Event-Driven</span><span class="tag">DDD</span><span class="tag">CQRS</span><span class="tag">Saga Pattern</span><span class="tag">Circuit Breaker</span><span class="tag">12-Factor App</span><span class="tag">SOLID Principles</span><span class="tag">Distributed Systems</span></div></div>
       <div class="skillgroup reveal"><h3>Messaging &amp; Streaming</h3><div class="tags"><span class="tag">Apache Kafka</span><span class="tag">RabbitMQ</span><span class="tag">AWS SQS</span><span class="tag">AWS SNS</span></div></div>
       <div class="skillgroup reveal"><h3>Cloud &amp; Platform</h3><div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">OCI</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">OpenShift</span><span class="tag">Helm</span></div></div>
-      <div class="skillgroup reveal"><h3>DevOps &amp; Observability</h3><div class="tags"><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">SonarQube</span><span class="tag">ELK Stack</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span></div></div>
+      <div class="skillgroup reveal"><h3>DevOps &amp; Observability</h3><div class="tags"><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">SonarQube</span><span class="tag">Snyk</span><span class="tag">Checkmarx One</span><span class="tag">ELK Stack</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span></div></div>
       <div class="skillgroup reveal"><h3>Security</h3><div class="tags"><span class="tag">OAuth2</span><span class="tag">OIDC</span><span class="tag">JWT</span><span class="tag">API Security</span><span class="tag">OWASP</span></div></div>
       <div class="skillgroup reveal"><h3>Databases</h3><div class="tags"><span class="tag">Oracle</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">SQL Server</span><span class="tag">MongoDB</span><span class="tag">Redis</span></div></div>
       <div class="skillgroup reveal"><h3>AI &amp; Modern Engineering</h3><div class="tags"><span class="tag">AI-Assisted Development</span><span class="tag">GenAI Integration</span><span class="tag">LLM Applications</span><span class="tag">RAG</span><span class="tag">GitHub Copilot</span><span class="tag">Amazon Q</span></div></div>
@@ -428,7 +432,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <span class="fbrand">Naresh Bhadke</span>
     <span>Technical Lead · Pune, India</span>
-    <span><a href="assets/Naresh_Bhadke_Resume.pdf" download="Naresh_Bhadke_Resume.pdf">Resume ↓</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/bhadkenaresh841" target="_blank" rel="noopener">linkedin.com/in/bhadkenaresh841</a></span>
+    <span><a href="mailto:bhadkenaresh841@gmail.com">Email</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/bhadkenaresh841" target="_blank" rel="noopener">LinkedIn</a> &nbsp;·&nbsp; <a href="assets/Naresh_Bhadke_Resume.pdf" download="Naresh_Bhadke_Resume.pdf">Resume ↓</a></span>
   </div>
 </footer>
 
