@@ -57,7 +57,15 @@ header{background:
   #10202B;
   color:var(--paper);padding:100px 0 92px;position:relative;overflow:hidden}
 header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;
-  background:linear-gradient(90deg,var(--teal) 0 34%,var(--amber) 34% 56%,var(--violet) 56% 78%,var(--rose) 78% 100%)}
+  background:linear-gradient(90deg,var(--teal) 0 34%,var(--amber) 34% 56%,var(--violet) 56% 78%,var(--rose) 78% 100%);z-index:3}
+.heroimg{position:absolute;top:0;right:0;bottom:0;width:46%;z-index:0;
+  background:url('assets/profile.jpg') right center/cover no-repeat;
+  filter:blur(7px) saturate(.85) brightness(.72);transform:scale(1.06);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.9) 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 42%,rgba(0,0,0,.9) 100%)}
+.heroimg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#10202B 0%,rgba(16,32,43,.55) 45%,rgba(16,32,43,.32) 100%)}
+header .wrap{position:relative;z-index:2}
+@media (max-width:760px){.heroimg{width:100%;opacity:.5;-webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.8) 60%);mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.8) 60%)}}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:24px;border:1px solid rgba(240,161,58,.36);padding:8px 16px;border-radius:999px;background:rgba(240,161,58,.07)}
 .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
 h1{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,6.6vw,4.6rem);line-height:1.02;letter-spacing:-.025em}
@@ -197,6 +205,7 @@ footer a:hover{text-decoration:underline}
 </nav>
 
 <header>
+  <div class="heroimg" aria-hidden="true"></div>
   <div class="wrap">
     <p class="eyebrow">Technical Lead · Payments &amp; Transit Systems</p>
     <h1>Engineering the systems<br>that <em>move money &amp; people</em></h1>
@@ -208,8 +217,7 @@ footer a:hover{text-decoration:underline}
       <div class="stat"><b>Java 21</b><span>Core stack</span></div>
     </div>
     <div class="contactbar">
-      <a class="cta" href="mailto:bhadkenaresh841@gmail.com">Get in touch →</a>
-      <a href="https://www.linkedin.com/in/bhadkenaresh841" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="cta" href="https://www.linkedin.com/in/bhadkenaresh841" target="_blank" rel="noopener">Get in touch →</a>
       <a href="#experience">View experience</a>
     </div>
   </div>
@@ -418,7 +426,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <span class="fbrand">Naresh Bhadke</span>
     <span>Technical Lead · Pune, India</span>
-    <a href="mailto:bhadkenaresh841@gmail.com">bhadkenaresh841@gmail.com</a>
+    <a href="https://www.linkedin.com/in/bhadkenaresh841" target="_blank" rel="noopener">linkedin.com/in/bhadkenaresh841</a>
   </div>
 </footer>
 
