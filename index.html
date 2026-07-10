@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naresh Bhadke — Technical Lead · Payments & Transit Systems</title>
+<meta name="description" content="Technical Lead with 9+ years in FinTech, Banking, Healthcare and Transit Payments. Java 21, Spring Boot, Microservices, Event-Driven Architecture.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAFBF8;
+  --ink:#152029;
+  --ink-soft:#4A5A66;
+  --line:#0B6E6E;          /* metro line teal */
+  --line-soft:#0B6E6E22;
+  --amber:#F2A33C;         /* current-station signal */
+  --card:#FFFFFF;
+  --rule:#E2E8E4;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --sans:'IBM Plex Sans',system-ui,sans-serif;
+  --display:'Archivo',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6}
+a{color:var(--line);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:2px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+
+/* ---------- header signage board ---------- */
+header{background:var(--ink);color:var(--paper);padding:64px 0 56px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;
+  background:repeating-linear-gradient(90deg,var(--line) 0 48px,var(--amber) 48px 60px)}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:14px}
+h1{font-family:var(--display);font-weight:850;font-stretch:112%;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.02;letter-spacing:-.01em}
+.role{font-family:var(--display);font-stretch:95%;font-weight:500;font-size:clamp(1.05rem,2.4vw,1.35rem);color:#B9C6CE;margin-top:10px}
+.role b{color:var(--paper);font-weight:600}
+.contactbar{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-family:var(--mono);font-size:.85rem}
+.contactbar a,.contactbar span{color:#C9D5DC;display:inline-flex;align-items:center;gap:7px}
+.contactbar a:hover{color:#fff;text-decoration:none}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--amber);display:inline-block}
+.summary{margin-top:26px;max-width:62ch;color:#C9D5DC;font-size:1.02rem}
+
+/* ---------- line badges (skills) ---------- */
+section{padding:56px 0}
+h2{font-family:var(--display);font-stretch:110%;font-weight:800;font-size:1.5rem;margin-bottom:6px}
+.sub{font-family:var(--mono);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:26px}
+.skillgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.skillgroup{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px}
+.skillgroup h3{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--line);margin-bottom:10px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-family:var(--mono);font-size:.76rem;background:var(--line-soft);color:#0A5252;padding:3px 9px;border-radius:999px}
+
+/* ---------- the transit line (experience) ---------- */
+.timeline{position:relative;margin-left:8px}
+.timeline::before{content:"";position:absolute;left:11px;top:8px;bottom:8px;width:6px;border-radius:3px;background:var(--line)}
+.stop{position:relative;padding:0 0 44px 52px}
+.stop:last-child{padding-bottom:0}
+.station{position:absolute;left:0;top:4px;width:28px;height:28px;border-radius:50%;
+  background:var(--paper);border:6px solid var(--line)}
+.stop.current .station{border-color:var(--amber);box-shadow:0 0 0 6px #F2A33C2E}
+.stop.current .when::after{content:"● NOW SERVING";color:var(--amber);margin-left:10px;font-size:.68rem;letter-spacing:.14em}
+.when{font-family:var(--mono);font-size:.78rem;color:var(--ink-soft);letter-spacing:.06em}
+.stop h3{font-family:var(--display);font-stretch:105%;font-weight:750;font-size:1.22rem;margin:4px 0 2px}
+.org{font-weight:600;color:var(--line);font-size:.98rem}
+.stop ul{margin:12px 0 0;padding-left:18px;color:var(--ink-soft)}
+.stop li{margin-bottom:6px}
+.stop li::marker{color:var(--line)}
+
+/* ---------- ticket-stub project cards ---------- */
+.projects{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.ticket{background:var(--card);border:1px solid var(--rule);border-radius:12px;padding:20px 22px;position:relative;display:flex;flex-direction:column}
+.ticket::before{content:"";position:absolute;top:0;left:22px;right:22px;height:4px;border-radius:0 0 4px 4px;background:var(--line)}
+.ticket .fare{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+.ticket h3{font-family:var(--display);font-stretch:105%;font-weight:720;font-size:1.05rem;margin-bottom:8px}
+.ticket p{font-size:.92rem;color:var(--ink-soft);flex:1}
+.ticket .stack{margin-top:14px;padding-top:12px;border-top:1px dashed var(--rule);font-family:var(--mono);font-size:.74rem;color:#0A5252;line-height:1.7}
+
+/* ---------- education / certs ---------- */
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.plain li{list-style:none;padding:12px 0;border-bottom:1px solid var(--rule)}
+.plain b{display:block;font-weight:600}
+.plain span{font-family:var(--mono);font-size:.8rem;color:var(--ink-soft)}
+
+footer{background:var(--ink);color:#B9C6CE;padding:36px 0;font-family:var(--mono);font-size:.82rem;margin-top:24px}
+footer a{color:var(--amber)}
+
+@media (max-width:640px){
+  .twocol{grid-template-columns:1fr}
+  header{padding:48px 0 44px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .stop{opacity:0;transform:translateY(14px);animation:arrive .5s ease forwards}
+  .stop:nth-child(1){animation-delay:.05s}.stop:nth-child(2){animation-delay:.15s}
+  .stop:nth-child(3){animation-delay:.25s}.stop:nth-child(4){animation-delay:.35s}
+  .stop:nth-child(5){animation-delay:.45s}
+  @keyframes arrive{to{opacity:1;transform:none}}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Technical Lead · Payments &amp; Transit Systems</p>
+    <h1>Naresh Bhadke</h1>
+    <p class="role">9+ years building <b>enterprise payment, settlement &amp; fare-collection platforms</b> across FinTech, Banking, Healthcare and Transit.</p>
+    <div class="contactbar">
+      <a href="mailto:bhadkenaresh841@gmail.com"><span class="dot"></span>bhadkenaresh841@gmail.com</a>
+      <a href="https://www.linkedin.com/in/bhadkenaresh841" target="_blank" rel="noopener"><span class="dot"></span>linkedin.com/in/bhadkenaresh841</a>
+      <span><span class="dot"></span>Pune, India</span>
+    </div>
+    <p class="summary">Specialized in Java 21, Spring Boot, Microservices, Event-Driven Architecture, Cloud-Native Development and Distributed Systems. Proven experience leading teams, architecting scalable platforms and delivering mission-critical applications on AWS, Azure, GCP and OCI. Awarded Best Performer, Spot Award and Star of the Month for critical project deliveries.</p>
+  </div>
+</header>
+
+<main>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="sub">Route map · 2016 → present</p>
+    <div class="timeline">
+
+      <article class="stop current">
+        <span class="station" aria-hidden="true"></span>
+        <p class="when">APR 2025 — PRESENT</p>
+        <h3>Technical Lead</h3>
+        <p class="org">E-ZEST Solutions · Pune</p>
+        <ul>
+          <li>Leading design and development on <b>GFCP Open Payment Transit System</b> (SPX Technologies) — a cloud-native, account-based ticketing and fare-collection platform for contactless Visa &amp; Mastercard transit payments.</li>
+          <li>Real-time fare processing, payment authorization, settlement, reconciliation and multi-tenant deployments for multiple transit agencies.</li>
+          <li>Java 21, Spring Boot 4.0, Spring Cloud, AWS SQS/SNS, CodeBuild, MySQL, MongoDB, OAuth2, CQRS, ISO 8583.</li>
+        </ul>
+      </article>
+
+      <article class="stop">
+        <span class="station" aria-hidden="true"></span>
+        <p class="when">JUL 2021 — MAR 2025</p>
+        <h3>Lead Technology</h3>
+        <p class="org">Synechron Technologies · Pune</p>
+        <ul>
+          <li>Led Mastercard &amp; Visa integrations; built the <b>Mastercard T-1 settlement</b> application and spearheaded <b>Visa Click to Pay</b> integration.</li>
+          <li>Led design of CQRS-based microservices at <b>Emirates NBD</b> (Bawaba Corporate): noqodi payment integration, reversal process flows and delivery-status APIs for third-party apps.</li>
+          <li>Built <b>BANKNET (DGFT, Japan)</b> with ISO 8583 integration and custom TCP socket design, Spring Batch, Oracle 21 &amp; PostgreSQL.</li>
+          <li>Event-driven architecture with Spring Boot, Kafka, OAuth2 across AWS, Azure and OpenShift.</li>
+        </ul>
+      </article>
+
+      <article class="stop">
+        <span class="station" aria-hidden="true"></span>
+        <p class="when">APR 2019 — JUL 2021</p>
+        <h3>Sr. Software Developer</h3>
+        <p class="org">DeepTek Medical Imaging · Pune</p>
+        <ul>
+          <li>Built the <b>Genki/Augmento</b> AI-driven teleradiology platform — cloud-native, multi-cloud (GCP, AWS, Azure, Dell, OCI) with DICOM (DCM4CHE, Cornerstone).</li>
+          <li>Led client integrations via OAuth2 authorization and cross-system API integration; improved performance and scalability.</li>
+        </ul>
+      </article>
+
+      <article class="stop">
+        <span class="station" aria-hidden="true"></span>
+        <p class="when">APR 2017 — NOV 2018</p>
+        <h3>Associate Java Developer</h3>
+        <p class="org">Softenger India · Pune</p>
+        <ul>
+          <li>Led development of <b>TalentOrb HRMS</b> on microservices architecture; built a Lead Management System and a Linux-deployed payroll application (Java 8, Spring Boot, Azure, PostgreSQL).</li>
+        </ul>
+      </article>
+
+      <article class="stop">
+        <span class="station" aria-hidden="true"></span>
+        <p class="when">JUL 2016 — DEC 2016</p>
+        <h3>Software Developer</h3>
+        <p class="org">Winsnit Technologies · Pune</p>
+        <ul>
+          <li>Backend services and REST APIs for <b>OnField</b> using Java 8, Spring Boot and Jersey JAX-RS on Ubuntu/MySQL.</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="background:#F1F4F0">
+  <div class="wrap">
+    <h2>Key Projects</h2>
+    <p class="sub">Valid for inspection · keep this ticket</p>
+    <div class="projects">
+      <article class="ticket">
+        <p class="fare">Transit Payments</p>
+        <h3>GFCP Open Payment Transit System</h3>
+        <p>Account-based ticketing platform enabling contactless Visa/Mastercard fare payments — authorization, settlement, reconciliation, multi-tenant agency deployments.</p>
+        <p class="stack">Java 21 · Spring Boot 4.0 · AWS SQS/SNS · CQRS · ISO 8583 · MySQL · MongoDB</p>
+      </article>
+      <article class="ticket">
+        <p class="fare">Banking · Emirates NBD</p>
+        <h3>Bawaba Corporate</h3>
+        <p>CQRS-based event-driven microservices for corporate banking: noqodi payment integration, reversal flows, delivery-status APIs.</p>
+        <p class="stack">Java 11 · Spring Cloud · Oracle 21 · MongoDB · Azure · OpenShift · OAuth2</p>
+      </article>
+      <article class="ticket">
+        <p class="fare">Card Networks · Japan</p>
+        <h3>BANKNET — DGFT</h3>
+        <p>ISO 8583 message integration with custom TCP socket design and batch settlement processing.</p>
+        <p class="stack">Java 11 · ISO 8583 · TCP Sockets · Spring Batch · React JS · Oracle 21 · PostgreSQL</p>
+      </article>
+      <article class="ticket">
+        <p class="fare">Healthcare AI</p>
+        <h3>Augmento Teleradiology</h3>
+        <p>AI-assisted diagnostic imaging platform with multi-cloud storage and cross-system OAuth2 integrations.</p>
+        <p class="stack">Spring Boot · DCM4CHE · Cornerstone · TensorFlow · GCP · AWS · Azure · OCI</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="sub">Network coverage</p>
+    <div class="skillgrid">
+      <div class="skillgroup"><h3>Programming</h3><div class="tags"><span class="tag">Java 21</span><span class="tag">Java 8</span><span class="tag">SQL</span><span class="tag">JavaScript</span><span class="tag">Python</span></div></div>
+      <div class="skillgroup"><h3>Backend &amp; Enterprise</h3><div class="tags"><span class="tag">Spring Boot</span><span class="tag">Spring Cloud</span><span class="tag">Spring Security</span><span class="tag">Spring Batch</span><span class="tag">Hibernate / JPA</span><span class="tag">REST</span><span class="tag">GraphQL</span></div></div>
+      <div class="skillgroup"><h3>Architecture</h3><div class="tags"><span class="tag">Microservices</span><span class="tag">Event-Driven</span><span class="tag">DDD</span><span class="tag">CQRS</span><span class="tag">Saga</span><span class="tag">Distributed Systems</span></div></div>
+      <div class="skillgroup"><h3>Messaging</h3><div class="tags"><span class="tag">Kafka</span><span class="tag">RabbitMQ</span><span class="tag">AWS SQS</span><span class="tag">AWS SNS</span></div></div>
+      <div class="skillgroup"><h3>Cloud &amp; Platform</h3><div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">GCP</span><span class="tag">OCI</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">OpenShift</span><span class="tag">Helm</span></div></div>
+      <div class="skillgroup"><h3>DevOps &amp; Observability</h3><div class="tags"><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">SonarQube</span><span class="tag">ELK</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">OpenTelemetry</span></div></div>
+      <div class="skillgroup"><h3>Security</h3><div class="tags"><span class="tag">OAuth2</span><span class="tag">OIDC</span><span class="tag">JWT</span><span class="tag">API Security</span><span class="tag">OWASP</span></div></div>
+      <div class="skillgroup"><h3>Databases</h3><div class="tags"><span class="tag">Oracle</span><span class="tag">PostgreSQL</span><span class="tag">MySQL</span><span class="tag">SQL Server</span><span class="tag">MongoDB</span><span class="tag">Redis</span></div></div>
+      <div class="skillgroup"><h3>AI &amp; Modern Engineering</h3><div class="tags"><span class="tag">AI-Assisted Dev</span><span class="tag">GenAI Integration</span><span class="tag">LLM Apps</span><span class="tag">RAG</span><span class="tag">GitHub Copilot</span><span class="tag">Amazon Q</span></div></div>
+      <div class="skillgroup"><h3>Leadership</h3><div class="tags"><span class="tag">Agile Scrum</span><span class="tag">TDD</span><span class="tag">Technical Governance</span><span class="tag">Mentoring</span><span class="tag">Solution Design</span><span class="tag">Stakeholder Mgmt</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="education" style="background:#F1F4F0">
+  <div class="wrap twocol">
+    <div>
+      <h2>Education</h2>
+      <p class="sub">Origin stations</p>
+      <ul class="plain">
+        <li><b>B.E. Computer Science &amp; Engineering</b><span>SRTMUN, Nanded · 2011 – 2015</span></li>
+        <li><b>Diploma in Computer Engineering</b><span>MSBTE · 2008 – 2011</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Certifications</h2>
+      <p class="sub">Validated passes</p>
+      <ul class="plain">
+        <li><b>AWS Cloud Practitioner Essentials</b><span>AWS Skill Builder · E-N0539V</span></li>
+        <li><b>OCI 2023 Foundations Associate</b><span>Oracle · 304310580OCIF2023CA</span></li>
+        <li><b>Docker</b><span>Certification</span></li>
+        <li><b>Google Cloud Onboard</b><span>Application Development</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>NARESH BHADKE · TECHNICAL LEAD · <a href="mailto:bhadkenaresh841@gmail.com">bhadkenaresh841@gmail.com</a> · PUNE, IN</p>
+  </div>
+</footer>
+
+</body>
+</html>
