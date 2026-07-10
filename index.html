@@ -166,7 +166,14 @@ h2{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3.4vw,2.15r
 .stop.current .station{border-color:var(--amber);box-shadow:0 0 0 7px rgba(240,161,58,.17)}
 .stopcard{background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:28px 32px;box-shadow:var(--shadow);transition:transform .22s,box-shadow .22s}
 .stopcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
-.stophead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 18px}
+.stophead{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 18px}
+.stoporg{display:flex;align-items:center;gap:15px}
+.stoporg h3{margin-top:0}
+.clogo{flex:0 0 54px;height:54px;border-radius:12px;border:1px solid var(--rule);background:#fff;display:grid;place-items:center;overflow:hidden}
+.clogo img{max-width:42px;max-height:40px;object-fit:contain}
+.clogo.dark{background:#16283A;border-color:#16283A}
+.clogo i{color:var(--ink-soft);font-size:1.15rem}
+@media (max-width:640px){.clogo{flex-basis:46px;height:46px}.clogo img{max-width:36px;max-height:34px}}
 .when{font-family:var(--mono);font-size:.72rem;color:var(--ink-soft);letter-spacing:.1em;background:var(--paper-alt);padding:5px 13px;border-radius:999px}
 .stop.current .when{background:var(--amber-tint);color:var(--amber-deep)}
 .stop h3{font-family:var(--display);font-weight:700;font-size:1.28rem;margin-top:8px;letter-spacing:-.01em}
@@ -351,7 +358,7 @@ footer a:hover{text-decoration:underline}
         <span class="station" aria-hidden="true"></span>
         <div class="stopcard">
           <div class="stophead">
-            <div><h3>Technical Lead</h3><p class="org">e-Zest – An Accion Labs Company · Pune</p></div>
+            <div class="stoporg"><span class="clogo"><img src="assets/logos/ezest.svg" alt="e-Zest logo" loading="lazy"></span><div><h3>Technical Lead</h3><p class="org">e-Zest – An Accion Labs Company · Pune</p></div></div>
             <span class="when">APR 2025 — PRESENT</span>
           </div>
           <ul>
@@ -367,7 +374,7 @@ footer a:hover{text-decoration:underline}
         <span class="station" aria-hidden="true"></span>
         <div class="stopcard">
           <div class="stophead">
-            <div><h3>Lead Technology</h3><p class="org">Synechron Technologies · Pune</p></div>
+            <div class="stoporg"><span class="clogo"><img src="assets/logos/synechron.svg" alt="Synechron logo" loading="lazy"></span><div><h3>Lead Technology</h3><p class="org">Synechron Technologies · Pune</p></div></div>
             <span class="when">JUL 2021 — MAR 2025</span>
           </div>
           <ul>
@@ -383,7 +390,7 @@ footer a:hover{text-decoration:underline}
         <span class="station" aria-hidden="true"></span>
         <div class="stopcard">
           <div class="stophead">
-            <div><h3>Sr. Software Developer</h3><p class="org">DeepTek Medical Imaging · Pune</p></div>
+            <div class="stoporg"><span class="clogo dark"><img src="assets/logos/deeptek.png" alt="DeepTek logo" loading="lazy"></span><div><h3>Sr. Software Developer</h3><p class="org">DeepTek Medical Imaging · Pune</p></div></div>
             <span class="when">APR 2019 — JUL 2021</span>
           </div>
           <ul>
@@ -397,7 +404,7 @@ footer a:hover{text-decoration:underline}
         <span class="station" aria-hidden="true"></span>
         <div class="stopcard">
           <div class="stophead">
-            <div><h3>Associate Java Developer</h3><p class="org">Softenger India · Pune</p></div>
+            <div class="stoporg"><span class="clogo"><img src="assets/logos/softenger.png" alt="Softenger logo" loading="lazy"></span><div><h3>Associate Java Developer</h3><p class="org">Softenger India · Pune</p></div></div>
             <span class="when">APR 2017 — NOV 2018</span>
           </div>
           <ul>
@@ -411,7 +418,7 @@ footer a:hover{text-decoration:underline}
         <span class="station" aria-hidden="true"></span>
         <div class="stopcard">
           <div class="stophead">
-            <div><h3>Software Developer</h3><p class="org">Winsnit Technologies · Pune</p></div>
+            <div class="stoporg"><span class="clogo"><i class="fa-solid fa-building" aria-hidden="true"></i></span><div><h3>Software Developer</h3><p class="org">Winsnit Technologies · Pune</p></div></div>
             <span class="when">JUL 2016 — DEC 2016</span>
           </div>
           <ul>
