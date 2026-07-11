@@ -129,8 +129,13 @@ section.alt{background:var(--paper-alt)}
 .navlinks a.active{color:var(--teal)}
 .sechead{margin-bottom:46px}
 h2{font-family:var(--display);font-weight:800;font-size:clamp(1.6rem,3.4vw,2.15rem);letter-spacing:-.02em}
-.sechead h2{position:relative;display:inline-block;padding-bottom:12px}
-.sechead h2::after{content:"";position:absolute;left:0;bottom:0;width:58px;height:4px;border-radius:4px;background:var(--grad)}
+.sechead h2{position:relative;display:inline-flex;align-items:center;gap:13px;padding-bottom:12px}
+.sechead h2::after{content:"";position:absolute;left:47px;bottom:0;width:58px;height:4px;border-radius:4px;background:var(--grad)}
+.hbadge{flex:0 0 36px;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:.92rem;box-shadow:0 6px 14px -4px rgba(17,28,38,.35)}
+.hbadge.t{background:linear-gradient(135deg,var(--teal),#14B0A8)}
+.hbadge.a{background:linear-gradient(135deg,var(--amber),#FFC876)}
+.hbadge.v{background:linear-gradient(135deg,var(--violet),#8F8FF0)}
+.hbadge.r{background:linear-gradient(135deg,var(--rose),#E2798C)}
 .sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:12px}
 .sub::after{content:"";flex:0 0 46px;height:2px;border-radius:2px;background:currentColor;opacity:.45}
 .sub.t{color:var(--teal)}.sub.a{color:var(--amber-deep)}.sub.v{color:var(--violet)}.sub.r{color:var(--rose)}
@@ -328,7 +333,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <div class="sechead">
       <p class="sub t">Profile</p>
-      <h2>About Me</h2>
+      <h2><span class="hbadge t"><i class="fa-solid fa-user"></i></span>About Me</h2>
     </div>
     <div class="aboutgrid">
       <div class="aboutcard reveal">
@@ -350,7 +355,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <div class="sechead">
       <p class="sub a">Career journey · 2016 → present</p>
-      <h2>Experience</h2>
+      <h2><span class="hbadge a"><i class="fa-solid fa-briefcase"></i></span>Experience</h2>
     </div>
     <div class="timeline">
 
@@ -435,7 +440,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <div class="sechead">
       <p class="sub v">Selected work</p>
-      <h2>Key Projects</h2>
+      <h2><span class="hbadge v"><i class="fa-solid fa-diagram-project"></i></span>Key Projects</h2>
     </div>
     <div class="projects">
       <article class="ticket c-teal reveal">
@@ -476,7 +481,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <div class="sechead">
       <p class="sub r">Technical expertise</p>
-      <h2>Skills</h2>
+      <h2><span class="hbadge r"><i class="fa-solid fa-code"></i></span>Skills</h2>
     </div>
     <div class="skillgrid">
       <div class="skillgroup reveal"><h3>Programming</h3><div class="tags"><span class="tag">Java 21</span><span class="tag">Java 8</span><span class="tag">Node.js</span><span class="tag">SQL</span><span class="tag">JavaScript</span><span class="tag">Python</span></div></div>
@@ -498,7 +503,7 @@ footer a:hover{text-decoration:underline}
     <div class="panel reveal">
       <div class="sechead" style="margin-bottom:16px">
         <p class="sub t">Academics</p>
-        <h2 style="font-size:1.4rem">Education</h2>
+        <h2 style="font-size:1.4rem"><span class="hbadge t" style="flex-basis:30px;width:30px;height:30px;font-size:.8rem"><i class="fa-solid fa-graduation-cap"></i></span>Education</h2>
       </div>
       <ul class="plain">
         <li><b>B.E. Computer Science &amp; Engineering</b><span>SRTMUN, Nanded · 2011 – 2015</span></li>
@@ -508,7 +513,7 @@ footer a:hover{text-decoration:underline}
     <div class="panel reveal">
       <div class="sechead" style="margin-bottom:16px">
         <p class="sub a">Credentials</p>
-        <h2 style="font-size:1.4rem">Certifications</h2>
+        <h2 style="font-size:1.4rem"><span class="hbadge a" style="flex-basis:30px;width:30px;height:30px;font-size:.8rem"><i class="fa-solid fa-certificate"></i></span>Certifications</h2>
       </div>
       <ul class="plain">
         <li><b>AWS Cloud Practitioner Essentials</b><span>AWS Skill Builder</span></li>
